@@ -6,3 +6,5 @@ These are solutions of some algorithms:
  - Find the missing element in two lists
  - Largest continues sum
  - Sequence reversal
+ - Factorial
+ - Fibonacci
