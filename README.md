@@ -8,3 +8,5 @@ These are solutions of some algorithms:
  - Sequence reversal
  - Factorial
  - Fibonacci
+ - String compression
+ - Unique character in string finder
