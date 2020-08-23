@@ -10,3 +10,11 @@ These are solutions of some algorithms:
  - Fibonacci
  - String compression
  - Unique character in string finder
+ - Stack
+ - Queue
+ - Deque
+ - Brackets validator(checks if each opening bracket has correct closing one)
+ 
+ 
+ 
+ All the algorithms have common unit tests.

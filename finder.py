@@ -1,6 +1,4 @@
 __author__ = 'Mihail Mihaylov'
-import sys
-import unittest
 import collections
 
 
@@ -28,21 +26,3 @@ def finder2(arr1, arr2):
             return num
         else:
             d[num] -= 1
-
-
-class TestPairSum(unittest.TestCase):
-    """Test class for finder"""
-    def test_pair_sum(self):
-        self.assertEqual(finder([1, 2, 3, 4, 5, 6, 7], [1, 2, 3, 4, 6, 7]), 5)
-        self.assertEqual(finder([1, 2, 3], [2]), 1)
-        self.assertEqual(finder([7, 6, 5, 4], [5, 6, 4]), 7)
-
-    def test_second_pair_sum(self):
-        """Test class for finder 2"""
-        self.assertEqual(finder2([1, 2, 3, 4, 5, 6, 7], [1, 2, 3, 4, 6, 7]), 5)
-        self.assertEqual(finder2([1, 2, 3], [2]), 1)
-        self.assertEqual(finder2([7, 6, 5, 4], [5, 6, 4]), 7)
-
-
-if __name__ == '__main__':
-    unittest.main(testRunner=unittest.TextTestRunner(verbosity=2, stream=sys.stdout))
