@@ -1,4 +1,7 @@
 __author__ = 'Mihail Mihaylov'
+import sys
+import unittest
+
 from anagram import *
 from array_pair_sum import *
 from factorial import *
@@ -12,9 +15,8 @@ from string_compression import *
 from unique_characters_in_string import *
 from deque import *
 from balance_parentheses_check import *
-
-import sys
-import unittest
+from linked_lists import *
+from recursion import *
 
 
 class TestAnagrams(unittest.TestCase):
@@ -300,6 +302,83 @@ class TestBalanceParentheses(unittest.TestCase):
         self.assertTrue(balance_parentheses_check('[]'))
         self.assertFalse(balance_parentheses_check('[[]'))
         self.assertTrue(balance_parentheses_check(''))
+
+
+class TestSinglyLinkedList(unittest.TestCase):
+
+    def test_cycle_check(self):
+        """Test that singly linked list cycle check returns correct value"""
+        # CREATE CYCLE LIST
+        node1 = Node(1)
+        node2 = Node(2)
+        node3 = Node(3)
+
+        node1.next_node = node2
+        node2.next_node = node3
+        node3.next_node = node1  # Cycle Here!
+
+        # CREATE NON CYCLE LIST
+        x = Node(1)
+        y = Node(2)
+        z = Node(3)
+
+        x.next_node = y
+        y.next_node = z
+
+        self.assertTrue(node1.cycle_check(node2))
+        self.assertFalse(x.cycle_check(x))
+
+    def test_reverse(self):
+        """Test that linked list can be reversed"""
+        node1 = Node(1)
+        node2 = Node(2)
+        node3 = Node(3)
+        node4 = Node(4)
+
+        node1.next_node = node2
+        node2.next_node = node3
+        node3.next_node = node4
+        #  the attribute next_node of node4 has no value
+        self.assertRaises(AttributeError, node4.next_node)
+        node1.reverse(node1)
+        self.assertEqual(node4.next_node.value, 3)
+        # After reverse the attribute next_node of node1 has no value
+        self.assertRaises(AttributeError, node1.next_node)
+
+    def test_get_nth_to_last_node(self):
+        node1 = Node(1)
+        node2 = Node(2)
+        node3 = Node(3)
+        node4 = Node(4)
+        node5 = Node(5)
+
+        node1.next_node = node2
+        node2.next_node = node3
+        node3.next_node = node4
+        node4.next_node = node5
+
+        result = node1.get_nth_to_last_node(2, node1)
+        self.assertEqual(result.value, 4)
+
+
+class Recursion(unittest.TestCase):
+    """Class to test recursive functions"""
+
+    def test_recursive_sum(self):
+        self.assertEqual(recursive_sum(4), 10)
+        self.assertEqual(recursive_sum(5), 15)
+        self.assertEqual(recursive_sum(0), 0)
+
+    def test_sum_func(self):
+        self.assertEqual(sum_func(4321), 10)
+        self.assertEqual(sum_func(0), 0)
+        self.assertEqual(sum_func(1), 1)
+
+    def test_word_split(self):
+        self.assertEqual(word_split('themanran', ['the', 'ran', 'man']), ['the', 'man', 'ran'])
+        self.assertEqual(word_split('ilovedogsJohn', ['i', 'am', 'a', 'dogs', 'lover', 'love', 'John']),
+                         ['i', 'love', 'dogs', 'John'])
+        self.assertEqual(word_split('', []), [])
 
 
 if __name__ == '__main__':

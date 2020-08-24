@@ -14,6 +14,10 @@ These are solutions of some algorithms:
  - Queue
  - Deque
  - Brackets validator(checks if each opening bracket has correct closing one)
+ - Linked lists and doubly linked lists
+ - Recursion examples
+ - Queue to stack
+ 
  
  
  
