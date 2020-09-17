@@ -1,6 +1,6 @@
 # Algorithms
 
-These are solutions of some algorithms:
+These are solutions of the following algorithms:
  - Anagram
  - Array pair
  - Find the missing element in two lists
