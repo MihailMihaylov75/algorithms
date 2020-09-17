@@ -30,7 +30,7 @@ def fib_recursive(n):
 
 def fib_recursive2(n):
     """"Find fibonacci nums recursive vol 2"""
-    return 0 if n == 0 else 1 if n == 1 else fib_recursive(n-1) + fib_recursive(n-2)
+    return 0 if n == 0 else 1 if n == 1 else fib_recursive2(n-1) + fib_recursive2(n-2)
 
 
 def get_fibonacci(func, n):

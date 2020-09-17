@@ -17,6 +17,9 @@ These are solutions of some algorithms:
  - Linked lists and doubly linked lists
  - Recursion examples
  - Queue to stack
+ - Decorators
+ - Class Inheritance
+ - Trees
  
  
  
