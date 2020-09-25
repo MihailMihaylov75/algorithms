@@ -84,5 +84,3 @@ class BinaryTree(object):
 
     def set_root_value(self, value):
         self.key = value
-
-

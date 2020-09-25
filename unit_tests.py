@@ -369,11 +369,6 @@ class Recursion(unittest.TestCase):
         self.assertEqual(recursive_sum(5), 15)
         self.assertEqual(recursive_sum(0), 0)
 
-    def test_sum_func(self):
-        self.assertEqual(sum_func(4321), 10)
-        self.assertEqual(sum_func(0), 0)
-        self.assertEqual(sum_func(1), 1)
-
     def test_word_split(self):
         self.assertEqual(word_split('themanran', ['the', 'ran', 'man']), ['the', 'man', 'ran'])
         self.assertEqual(word_split('ilovedogsJohn', ['i', 'am', 'a', 'dogs', 'lover', 'love', 'John']),
