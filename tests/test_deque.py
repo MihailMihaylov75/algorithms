@@ -22,4 +22,3 @@ def test_size_increases_and_decreases(empty_deque: Deque[int]) -> None:
 def test_remove_from_empty_raises(empty_deque: Deque[int]) -> None:
     with pytest.raises(IndexError):
         empty_deque.remove_front()
-
