@@ -23,3 +23,12 @@ def test_pop_on_empty_raises(empty_stack: Stack[int]) -> None:
     with pytest.raises(IndexError):
         empty_stack.pop()
 
+
+def test_peek_on_empty_raises(empty_stack: Stack[int]) -> None:
+    with pytest.raises(IndexError):
+        empty_stack.peek()
+
+
+def test_is_empty_on_new_stack(empty_stack: Stack[int]) -> None:
+    assert empty_stack.is_empty()
+

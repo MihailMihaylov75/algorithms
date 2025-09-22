@@ -28,3 +28,7 @@ def test_dequeue_on_empty_raises(empty_queue2stack: Queue2Stack[int]) -> None:
     with pytest.raises(IndexError):
         empty_queue2stack.dequeue()
 
+
+def test_is_empty_on_new_queue2stack(empty_queue2stack: Queue2Stack[int]) -> None:
+    assert empty_queue2stack.is_empty()
+

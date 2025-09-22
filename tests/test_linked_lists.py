@@ -31,3 +31,18 @@ def test_nth_to_last_raises_when_n_too_large() -> None:
     a = SinglyNode(1, SinglyNode(2))
     with pytest.raises(ValueError):
         nth_to_last(a, 3)
+
+
+def test_cycle_check_false_on_acyclic_list() -> None:
+    head = SinglyNode(1, SinglyNode(2, SinglyNode(3)))
+    assert not cycle_check(head)
+
+
+def test_reverse_none_returns_none() -> None:
+    assert reverse(None) is None
+
+
+def test_nth_to_last_n_zero_raises() -> None:
+    head = SinglyNode(1, SinglyNode(2))
+    with pytest.raises(ValueError):
+        nth_to_last(head, 0)
