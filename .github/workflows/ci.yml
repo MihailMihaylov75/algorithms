@@ -1,0 +1,63 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      PYTHONPATH: src  # src/ layout imports
+
+    strategy:
+      matrix:
+        python-version: ["3.11"]
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Show versions
+        run: |
+          python --version
+          pip --version
+          ruff --version
+          mypy --version
+          pytest --version
+          python -c "import coverage, sys; print('coverage', coverage.__version__)"
+
+      - name: Ruff format (check only)
+        run: ruff format --check .
+
+      - name: Ruff lint
+        run: ruff check .
+
+      - name: Mypy (type-check)
+        run: mypy src
+
+      - name: Tests + Coverage
+        run: |
+          coverage erase
+          coverage run -m pytest -q
+          coverage report -m  # honors fail_under in .coveragerc
+          coverage xml
+
+      - name: Upload coverage artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: coverage-xml
+          path: coverage.xml
