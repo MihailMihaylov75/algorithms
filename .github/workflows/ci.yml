@@ -41,10 +41,10 @@ jobs:
           python -c "import coverage, sys; print('coverage', coverage.__version__)"
 
       - name: Ruff format (check only)
-        run: ruff format --check .
+        run: ruff format --check src
 
       - name: Ruff lint
-        run: ruff check .
+        run: ruff check src
 
       - name: Mypy (type-check)
         run: mypy src

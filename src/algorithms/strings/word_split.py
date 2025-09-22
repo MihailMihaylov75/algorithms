@@ -1,4 +1,3 @@
-__author__ = 'Mihail Mihaylov'
 """
 Problem:
 Given a string `phrase` and a dictionary of words, return one valid split of the
@@ -12,7 +11,6 @@ Notes:
 - Deterministic DP solution (prefix scan), no greedy pitfalls.
 - Time: O(n^2) worst-case; Space: O(n) for reconstruction.
 """
-
 from collections.abc import Collection
 
 

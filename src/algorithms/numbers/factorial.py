@@ -1,4 +1,3 @@
-__author__ = 'Mihail Mihaylov'
 """
 Problem:
 Compute n! (factorial of a non-negative integer n).
@@ -18,7 +17,6 @@ Examples:
 Notes:
 - Prefer the iterative version for large n to avoid RecursionError.
 """
-
 from typing import Final
 
 _MIN_N: Final[int] = 0

@@ -1,4 +1,3 @@
-__author__ = 'Mihail Mihaylov'
 """
 Problem:
 Given a target amount and coin denominations, return the minimum number of coins
@@ -16,7 +15,6 @@ Notes:
 - Space:
     * recursion depth up to target (naive), memo uses O(target)
 """
-
 from collections.abc import Iterable, Sequence
 from functools import cache
 
@@ -77,7 +75,8 @@ def min_coins_memo(target: int, coins: Iterable[int]) -> int:
             if c <= t:
                 try:
                     candidate = 1 + solve(t - c)
-                    best_local = candidate if best_local is None or candidate < best_local else best_local
+                    best_local = candidate if best_local is None or candidate < best_local \
+                        else best_local
                 except ValueError:
                     pass
         if best_local is None:
