@@ -142,7 +142,7 @@ pip install -r requirements.txt
 
 ## Continuous Integration (CI)
 
-[![CI](https://img.shields.io/github/actions/workflow/status/MihailMihaylov75/algorithms/ci.yml?branch=main)](https://github.com/MihailMihaylov75/algorithms/actions)
+[![CI](https://img.shields.io/github/actions/workflow/status/MihailMihaylov75/algorithms/ci.yml)](https://github.com/MihailMihaylov75/algorithms/actions)
 
 The project ships with a GitHub Actions workflow (`.github/workflows/ci.yml`) that runs on every push and PR:
 
