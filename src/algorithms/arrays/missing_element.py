@@ -83,8 +83,8 @@ def missing_element_count(a: Iterable[int], b: Iterable[int]) -> int:
     _validate_lengths(a, b)
 
     # Convert to lists once after validation so we can iterate multiple times
-    a_list: List[int] = list(a) if not isinstance(a, list) else a  # type: ignore[assignment]
-    b_list: List[int] = list(b) if not isinstance(b, list) else b  # type: ignore[assignment]
+    a_list: List[int] = list(a) if not isinstance(a, list) else a
+    b_list: List[int] = list(b) if not isinstance(b, list) else b
 
     counts: DefaultDict[int, int] = defaultdict(int)
     for num in b_list:
