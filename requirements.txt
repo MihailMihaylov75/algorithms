@@ -1,0 +1,7 @@
+# requirements.txt
+
+# Code quality tools
+pylint==3.2.6
+ruff==0.6.4
+coverage==7.6.1
+mypy==1.11.2

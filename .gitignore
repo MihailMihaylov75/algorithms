@@ -1,0 +1,40 @@
+# Python cache / build
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+build/
+dist/
+*.egg-info/
+
+# Virtual environments
+.venv/
+env/
+venv/
+
+# Test & coverage
+.pytest_cache/
+.coverage
+coverage.xml
+htmlcov/
+
+# Reports & artifacts
+reports/
+allure-results/
+allure-report/
+downloads/
+tmp/
+
+# Config & env files
+*.env
+.env.*
+config/settings.local.yaml
+
+# Editors / IDE
+.vscode/
+.idea/
+*.swp
+
+# OS junk
+.DS_Store
+Thumbs.db

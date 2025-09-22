@@ -1,0 +1,22 @@
+[run]
+branch = True
+source =
+    app
+    blog
+    post
+omit =
+    tests/*
+    .venv/*
+    */__init__.py
+
+[report]
+show_missing = True
+skip_covered = False
+fail_under = 90
+precision = 1
+exclude_lines =
+    pragma: no cover
+    ^if __name__ == .__main__.:$
+
+[html]
+directory = htmlcov
