@@ -140,3 +140,25 @@ pip install -r requirements.txt
 - Lint/typing/tests pass (`ruff`, `mypy`, `pytest`)
 - Coverage ≥ 90% and entry added to **Algorithms Index**
 
+## Continuous Integration (CI)
+
+[![CI](https://img.shields.io/github/actions/workflow/status/MihailMihaylov75/algorithms/ci.yml?branch=main)](https://github.com/MihailMihaylov75/algorithms/actions)
+
+The project ships with a GitHub Actions workflow (`.github/workflows/ci.yml`) that runs on every push and PR:
+
+- **Ruff format (check)** on `src/`
+- **Ruff lint** on `src/`
+- **mypy** on `src/`
+- **pytest** with **coverage** (fails if coverage < `fail_under` in `.coveragerc`)
+- Uploads `coverage.xml` as an artifact
+
+### Reproduce locally
+
+**Windows (PowerShell):**
+```powershell
+ruff format src --check
+ruff check src
+mypy src
+coverage erase
+$env:PYTHONPATH="src"; coverage run -m pytest -q
+coverage report -m
