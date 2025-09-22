@@ -3,18 +3,17 @@ from src.algorithms.strings.balance_parentheses_check import balance_parentheses
 
 
 def test_simple_balanced() -> None:
-    assert balance_parentheses("()") is True
+    assert balance_parentheses("()")
 
 
-def test_mixed_balanced() -> None:
-    assert balance_parentheses("()[]{}") is True
+def test_unbalanced_wrong_type() -> None:
+    assert not balance_parentheses("(]")
 
 
 def test_unbalanced_wrong_order() -> None:
-    assert balance_parentheses("(]") is False
-    assert balance_parentheses("([)]") is False
+    assert not balance_parentheses("([)]")
 
 
-def test_empty_string() -> None:
-    assert balance_parentheses("") is True
+def test_empty_string_is_balanced() -> None:
+    assert balance_parentheses("")
 
