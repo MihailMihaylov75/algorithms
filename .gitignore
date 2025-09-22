@@ -3,9 +3,11 @@ __pycache__/
 *.py[cod]
 *$py.class
 *.so
+*.pyd
 build/
 dist/
 *.egg-info/
+.eggs/
 
 # Virtual environments
 .venv/
@@ -15,8 +17,14 @@ venv/
 # Test & coverage
 .pytest_cache/
 .coverage
+.coverage.*
 coverage.xml
 htmlcov/
+
+# Tool caches
+.mypy_cache/
+.ruff_cache/
+.hypothesis/
 
 # Reports & artifacts
 reports/
@@ -28,7 +36,9 @@ tmp/
 # Config & env files
 *.env
 .env.*
-config/settings.local.yaml
+!*.env.example
+# ако имаш примерни YAML-и
+# !config/settings.example.yaml
 
 # Editors / IDE
 .vscode/
@@ -38,3 +48,10 @@ config/settings.local.yaml
 # OS junk
 .DS_Store
 Thumbs.db
+desktop.ini
+
+# Optional: pyenv marker
+.python-version
+
+# Notebooks
+.ipynb_checkpoints/

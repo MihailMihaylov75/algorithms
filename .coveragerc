@@ -1,13 +1,13 @@
 [run]
 branch = True
 source =
-    app
-    blog
-    post
+    algorithms
 omit =
     tests/*
     .venv/*
-    */__init__.py
+    **/__init__.py
+    **/wip/*
+    **/archive/*
 
 [report]
 show_missing = True
@@ -17,6 +17,7 @@ precision = 1
 exclude_lines =
     pragma: no cover
     ^if __name__ == .__main__.:$
+    ^if TYPE_CHECKING:$
 
 [html]
 directory = htmlcov
