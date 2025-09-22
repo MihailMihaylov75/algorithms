@@ -14,7 +14,6 @@ Constraints:
 """
 
 
-
 def array_pair_sum(numbers: list[int], target: int) -> int:
     """
     Counts the number of unique pairs in the given list of integers that add up

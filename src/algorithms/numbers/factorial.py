@@ -17,6 +17,7 @@ Examples:
 Notes:
 - Prefer the iterative version for large n to avoid RecursionError.
 """
+
 from typing import Final
 
 _MIN_N: Final[int] = 0
@@ -72,4 +73,3 @@ def factorial_iterative(n: int) -> int:
     for k in range(n, 1, -1):
         result *= k
     return result
-

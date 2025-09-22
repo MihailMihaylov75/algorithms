@@ -9,6 +9,7 @@ Notes:
   - pop(): pop from the end            → O(1)
   - peek(): read the last element      → O(1)
 """
+
 from typing import Generic, TypeVar
 
 T = TypeVar("T")

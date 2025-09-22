@@ -16,7 +16,6 @@ Notes:
 """
 
 
-
 def reverse_words(text: str) -> str:
     """
     Returns the input string with word order reversed, using single spaces

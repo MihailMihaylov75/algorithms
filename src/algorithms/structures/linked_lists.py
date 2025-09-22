@@ -26,6 +26,7 @@ Notes:
 - Educational implementations focused on clarity, not utilities.
 - All operations are O(n) time, O(1) extra space unless stated otherwise.
 """
+
 from __future__ import annotations
 
 from typing import Generic, TypeVar

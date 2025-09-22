@@ -1,4 +1,4 @@
-__author__ = 'Mihail Mihaylov'
+__author__ = "Mihail Mihaylov"
 """
 Problem:
 Reverse a string using recursion.
@@ -11,6 +11,7 @@ Notes:
 - Recursive; for very long strings prefer iterative slicing for safety.
 - Time: O(n), Space: O(n) due to recursion depth.
 """
+
 
 def reverse_string_recursive(s: str) -> str:
     """

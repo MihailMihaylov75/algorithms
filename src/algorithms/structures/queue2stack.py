@@ -15,6 +15,7 @@ Complexities:
 - Enqueue: O(1).
 - Dequeue: Amortized O(1), worst-case O(n) when transferring.
 """
+
 from typing import Generic, TypeVar
 
 T = TypeVar("T")

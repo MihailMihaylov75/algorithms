@@ -1,4 +1,4 @@
-__author__ = 'Mihail Mihaylov'
+__author__ = "Mihail Mihaylov"
 """
 Problem:
 Generate all permutations of a string with (assumed) distinct characters.
@@ -12,7 +12,6 @@ Notes:
 """
 
 
-
 def permutations(s: str) -> list[str]:
     """
     Returns all permutations of `s` (assumes distinct chars).
@@ -24,6 +23,6 @@ def permutations(s: str) -> list[str]:
         return [s]
     out: list[str] = []
     for i, ch in enumerate(s):
-        for perm in permutations(s[:i] + s[i + 1:]):
+        for perm in permutations(s[:i] + s[i + 1 :]):
             out.append(ch + perm)
     return out

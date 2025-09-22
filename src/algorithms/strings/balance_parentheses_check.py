@@ -20,7 +20,6 @@ Constraints:
 """
 
 
-
 def balance_parentheses(s: str) -> bool:
     """
     Checks whether a given string has balanced parentheses.

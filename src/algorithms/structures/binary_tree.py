@@ -35,6 +35,7 @@ class BTNode(Generic[T]):
         left: Left child (or None).
         right: Right child (or None).
     """
+
     value: T
     left: BTNode[T] | None = None
     right: BTNode[T] | None = None

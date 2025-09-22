@@ -1,4 +1,4 @@
-__author__ = 'Mihail Mihaylov'
+__author__ = "Mihail Mihaylov"
 """
 Problem:
 Return the sum 1 + 2 + ... + n for a non-negative integer n. For n = 0 -> 0.
@@ -11,6 +11,7 @@ Notes:
 - Valid only for non-negative integers.
 - Time: O(n), Space: O(n) due to recursion depth.
 """
+
 
 def recursive_sum(n: int) -> int:
     """

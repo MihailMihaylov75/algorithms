@@ -1,4 +1,4 @@
-__author__ = 'Mihail Mihaylov'
+__author__ = "Mihail Mihaylov"
 """
 Problem:
 Return the sum of the decimal digits of a non-negative integer.
@@ -11,6 +11,7 @@ Notes:
 - Valid only for non-negative integers.
 - Time: O(d) where d is number of digits. Space: O(1).
 """
+
 
 def sum_of_digits(n: int) -> int:
     """

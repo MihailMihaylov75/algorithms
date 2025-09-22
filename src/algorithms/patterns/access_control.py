@@ -101,6 +101,7 @@ def access_level(
        because mypy cannot infer it automatically.
     6. Complexity: O(1) — constant-time overhead to look up the user and compare levels.
     """
+
     def decorator(func: F) -> F:
         @functools.wraps(func)
         def wrapper(*args: Any, **kwargs: Any) -> Any:
@@ -111,6 +112,7 @@ def access_level(
             return func(*args, **kwargs)
 
         return cast(F, wrapper)
+
     return decorator
 
 

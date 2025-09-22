@@ -9,6 +9,7 @@ Notes:
   - dequeue() pops from the rear (end)       → O(1)
 - For production, prefer collections.deque for amortized O(1) on both ends.
 """
+
 from typing import Generic, TypeVar
 
 T = TypeVar("T")

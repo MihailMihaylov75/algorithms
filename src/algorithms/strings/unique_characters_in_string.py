@@ -15,7 +15,6 @@ Notes:
 """
 
 
-
 def is_unique(text: str) -> bool:
     """
     Checks whether all characters in the input string are unique.
