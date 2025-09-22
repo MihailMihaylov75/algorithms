@@ -1,5 +1,5 @@
-__author__ = 'Mihail Mihaylov'
 import pytest
+
 from src.algorithms.numbers.sum_of_digits import sum_of_digits
 
 

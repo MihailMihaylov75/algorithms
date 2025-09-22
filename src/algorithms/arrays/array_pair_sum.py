@@ -13,10 +13,9 @@ Constraints:
 - Each unique pair is counted only once.
 """
 
-from typing import List
 
 
-def array_pair_sum(numbers: List[int], target: int) -> int:
+def array_pair_sum(numbers: list[int], target: int) -> int:
     """
     Counts the number of unique pairs in the given list of integers that add up
     to the target sum.

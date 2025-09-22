@@ -1,5 +1,5 @@
-__author__ = 'Mihail Mihaylov'
 import pytest
+
 from src.algorithms.structures.stack import Stack
 
 

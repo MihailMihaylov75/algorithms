@@ -14,7 +14,7 @@ Notes:
 - Space Complexity: O(1)
 """
 
-from typing import Sequence
+from collections.abc import Sequence
 
 
 def largest_contiguous_sum(nums: Sequence[int]) -> int:

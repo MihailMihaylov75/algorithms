@@ -1,6 +1,8 @@
 __author__ = 'Mihail Mihaylov'
 from itertools import islice
+
 import pytest
+
 from src.algorithms.numbers.fibonacci import (
     fib_iterative,
     fib_recursive,

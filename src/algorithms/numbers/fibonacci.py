@@ -18,8 +18,8 @@ Examples:
     fib_sequence(5)    -> [0, 1, 1, 2, 3]
 """
 
-from typing import Final, Iterator, List
-
+from collections.abc import Iterator
+from typing import Final
 
 _MIN_N: Final[int] = 0
 
@@ -85,7 +85,7 @@ def fib_recursive(n: int) -> int:
     return fib_recursive(n - 1) + fib_recursive(n - 2)
 
 
-def fib_sequence(n: int) -> List[int]:
+def fib_sequence(n: int) -> list[int]:
     """
     Returns the first n Fibonacci numbers as a list.
 
@@ -95,7 +95,7 @@ def fib_sequence(n: int) -> List[int]:
     Space Complexity: O(n)
     """
     _validate(n)
-    seq: List[int] = []
+    seq: list[int] = []
     a, b = 0, 1
     for _ in range(n):
         seq.append(a)

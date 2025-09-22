@@ -13,10 +13,10 @@ Notes:
 - Time: O(n^2) worst-case; Space: O(n) for reconstruction.
 """
 
-from typing import Collection, List
+from collections.abc import Collection
 
 
-def word_split(phrase: str, dictionary: Collection[str]) -> List[str]:
+def word_split(phrase: str, dictionary: Collection[str]) -> list[str]:
     """
     Returns a valid segmentation of `phrase` into words from `dictionary`.
 
@@ -40,7 +40,7 @@ def word_split(phrase: str, dictionary: Collection[str]) -> List[str]:
         return []
 
     # Reconstruct words from prev[]
-    out: List[str] = []
+    out: list[str] = []
     i = n
     while i > 0:
         j = prev[i]

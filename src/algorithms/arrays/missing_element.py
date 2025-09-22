@@ -21,7 +21,7 @@ Notes:
 from __future__ import annotations
 
 from collections import defaultdict
-from typing import DefaultDict, Iterable, List
+from collections.abc import Iterable
 
 
 def _validate_lengths(a: Iterable[int], b: Iterable[int]) -> None:
@@ -53,8 +53,8 @@ def missing_element_sort(a: Iterable[int], b: Iterable[int]) -> int:
     Space Complexity: O(n) due to defensive copies for immutability.
     :raises ValueError: If lengths are invalid.
     """
-    a_list: List[int] = list(a)
-    b_list: List[int] = list(b)
+    a_list: list[int] = list(a)
+    b_list: list[int] = list(b)
 
     if len(a_list) != len(b_list) + 1:
         raise ValueError("Lengths must satisfy len(a) = len(b) + 1.")
@@ -62,7 +62,7 @@ def missing_element_sort(a: Iterable[int], b: Iterable[int]) -> int:
     a_sorted = sorted(a_list)
     b_sorted = sorted(b_list)
 
-    for x, y in zip(a_sorted, b_sorted):
+    for x, y in zip(a_sorted, b_sorted, strict=False):
         if x != y:
             return x
     return a_sorted[-1]
@@ -83,10 +83,10 @@ def missing_element_count(a: Iterable[int], b: Iterable[int]) -> int:
     _validate_lengths(a, b)
 
     # Convert to lists once after validation so we can iterate multiple times
-    a_list: List[int] = list(a) if not isinstance(a, list) else a
-    b_list: List[int] = list(b) if not isinstance(b, list) else b
+    a_list: list[int] = list(a) if not isinstance(a, list) else a
+    b_list: list[int] = list(b) if not isinstance(b, list) else b
 
-    counts: DefaultDict[int, int] = defaultdict(int)
+    counts: defaultdict[int, int] = defaultdict(int)
     for num in b_list:
         counts[num] += 1
 

@@ -11,7 +11,7 @@ Examples:
     dq.remove_rear()   -> 20
 """
 
-from typing import Generic, List, TypeVar
+from typing import Generic, TypeVar
 
 T = TypeVar("T")
 
@@ -29,7 +29,7 @@ class Deque(Generic[T]):
 
     def __init__(self) -> None:
         """Initializes an empty deque."""
-        self._items: List[T] = []
+        self._items: list[T] = []
 
     def is_empty(self) -> bool:
         """

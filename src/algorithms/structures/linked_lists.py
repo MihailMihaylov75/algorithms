@@ -28,7 +28,7 @@ Notes:
 """
 from __future__ import annotations
 
-from typing import Generic, Optional, TypeVar
+from typing import Generic, TypeVar
 
 T = TypeVar("T")
 
@@ -43,12 +43,12 @@ class SinglyNode(Generic[T]):
 
     __slots__ = ("value", "next")
 
-    def __init__(self, value: T, next: Optional["SinglyNode[T]"] = None) -> None:
+    def __init__(self, value: T, next: SinglyNode[T] | None = None) -> None:
         self.value: T = value
-        self.next: Optional["SinglyNode[T]"] = next
+        self.next: SinglyNode[T] | None = next
 
 
-def cycle_check(head: Optional[SinglyNode[T]]) -> bool:
+def cycle_check(head: SinglyNode[T] | None) -> bool:
     """
     Detects whether the given singly linked list contains a cycle.
 
@@ -58,8 +58,8 @@ def cycle_check(head: Optional[SinglyNode[T]]) -> bool:
     Time Complexity: O(n)
     Space Complexity: O(1)
     """
-    slow: Optional[SinglyNode[T]] = head
-    fast: Optional[SinglyNode[T]] = head
+    slow: SinglyNode[T] | None = head
+    fast: SinglyNode[T] | None = head
 
     while fast is not None and fast.next is not None:
         slow = slow.next if slow is not None else None
@@ -69,7 +69,7 @@ def cycle_check(head: Optional[SinglyNode[T]]) -> bool:
     return False
 
 
-def reverse(head: Optional[SinglyNode[T]]) -> Optional[SinglyNode[T]]:
+def reverse(head: SinglyNode[T] | None) -> SinglyNode[T] | None:
     """
     Reverses a singly linked list and returns the new head.
 
@@ -79,8 +79,8 @@ def reverse(head: Optional[SinglyNode[T]]) -> Optional[SinglyNode[T]]:
     Time Complexity: O(n)
     Space Complexity: O(1)
     """
-    prev: Optional[SinglyNode[T]] = None
-    curr: Optional[SinglyNode[T]] = head
+    prev: SinglyNode[T] | None = None
+    curr: SinglyNode[T] | None = head
 
     while curr is not None:
         nxt = curr.next
@@ -91,7 +91,7 @@ def reverse(head: Optional[SinglyNode[T]]) -> Optional[SinglyNode[T]]:
     return prev
 
 
-def nth_to_last(head: Optional[SinglyNode[T]], n: int) -> SinglyNode[T]:
+def nth_to_last(head: SinglyNode[T] | None, n: int) -> SinglyNode[T]:
     """
     Returns the n-th to last node (1-based). For example, n=1 -> last node.
 
@@ -106,13 +106,13 @@ def nth_to_last(head: Optional[SinglyNode[T]], n: int) -> SinglyNode[T]:
     if n < 1:
         raise ValueError("n must be >= 1")
 
-    lead: Optional[SinglyNode[T]] = head
+    lead: SinglyNode[T] | None = head
     for _ in range(n):
         if lead is None:
             raise ValueError("n is larger than the size of the linked list")
         lead = lead.next
 
-    follow: Optional[SinglyNode[T]] = head
+    follow: SinglyNode[T] | None = head
     while lead is not None:
         # both pointers advance until lead hits the end
         follow = follow.next if follow is not None else None
@@ -139,9 +139,9 @@ class DoublyNode(Generic[T]):
     def __init__(
         self,
         value: T,
-        prev_node: Optional["DoublyNode[T]"] = None,
-        next_node: Optional["DoublyNode[T]"] = None,
+        prev_node: DoublyNode[T] | None = None,
+        next_node: DoublyNode[T] | None = None,
     ) -> None:
         self.value: T = value
-        self.prev: Optional["DoublyNode[T]"] = prev_node
-        self.next: Optional["DoublyNode[T]"] = next_node
+        self.prev: DoublyNode[T] | None = prev_node
+        self.next: DoublyNode[T] | None = next_node

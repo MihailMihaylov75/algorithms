@@ -19,7 +19,6 @@ Constraints:
 - Only the six bracket characters are relevant; other characters are not expected.
 """
 
-from typing import List
 
 
 def balance_parentheses(s: str) -> bool:
@@ -37,7 +36,7 @@ def balance_parentheses(s: str) -> bool:
 
     opening_brackets = {"{", "(", "["}
     matches = {("(", ")"), ("{", "}"), ("[", "]")}
-    stack: List[str] = []
+    stack: list[str] = []
 
     for bracket in s:
         if bracket in opening_brackets:

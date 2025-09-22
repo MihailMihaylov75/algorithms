@@ -1,5 +1,6 @@
 __author__ = 'Mihail Mihaylov'
 import pytest
+
 from src.algorithms.structures.queue import Queue
 
 

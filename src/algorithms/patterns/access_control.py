@@ -19,9 +19,9 @@ Examples:
         return int(user["password"])
 """
 
-from typing import Any, Callable, Mapping, TypeVar, cast
 import functools
-
+from collections.abc import Callable, Mapping
+from typing import Any, TypeVar, cast
 
 # Define a generic type variable F that represents "some function type".
 # By bounding it to Callable[..., Any], we guarantee F can only be a function

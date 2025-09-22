@@ -1,6 +1,6 @@
-__author__ = 'Mihail Mihaylov'
-from src.algorithms.arrays.missing_element import missing_element_sort, missing_element_count
 import pytest
+
+from src.algorithms.arrays.missing_element import missing_element_count, missing_element_sort
 
 
 def test_sort_finds_missing_with_duplicates() -> None:

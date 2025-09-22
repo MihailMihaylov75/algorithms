@@ -1,6 +1,7 @@
 __author__ = 'Mihail Mihaylov'
 
 import pytest
+
 from src.algorithms.patterns.access_control import (
     get_admin_password,
     get_user_password,

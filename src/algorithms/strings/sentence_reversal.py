@@ -15,7 +15,6 @@ Notes:
 - Space Complexity: O(n)  (for the list of words and the output string)
 """
 
-from typing import List
 
 
 def reverse_words(text: str) -> str:
@@ -26,7 +25,7 @@ def reverse_words(text: str) -> str:
     :param text: Input string (may contain any whitespace).
     :return: String with reversed word order and normalized spacing.
     """
-    words: List[str] = text.split()
+    words: list[str] = text.split()
     words.reverse()
     return " ".join(words)
 

@@ -11,10 +11,9 @@ Notes:
 - Time: O(n * n!) total; Space: O(n * n!) for the result.
 """
 
-from typing import List
 
 
-def permutations(s: str) -> List[str]:
+def permutations(s: str) -> list[str]:
     """
     Returns all permutations of `s` (assumes distinct chars).
 
@@ -23,7 +22,7 @@ def permutations(s: str) -> List[str]:
     """
     if len(s) <= 1:
         return [s]
-    out: List[str] = []
+    out: list[str] = []
     for i, ch in enumerate(s):
         for perm in permutations(s[:i] + s[i + 1:]):
             out.append(ch + perm)

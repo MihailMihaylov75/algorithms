@@ -1,5 +1,6 @@
 # tests/test_anagram.py
 import pytest
+
 from src.algorithms.strings.anagram import is_anagram, is_anagram2
 
 CANDIDATES = (is_anagram, is_anagram2)

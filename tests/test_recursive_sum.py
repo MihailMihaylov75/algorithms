@@ -1,5 +1,5 @@
-__author__ = 'Mihail Mihaylov'
 import pytest
+
 from src.algorithms.numbers.recursive_sum import recursive_sum
 
 

@@ -21,7 +21,6 @@ Notes:
 
 from typing import Final
 
-
 _MIN_N: Final[int] = 0
 
 

@@ -1,6 +1,7 @@
 __author__ = 'Mihail Mihaylov'
 import pytest
-from src.algorithms.numbers.factorial import factorial_recursive, factorial_iterative
+
+from src.algorithms.numbers.factorial import factorial_iterative, factorial_recursive
 
 
 def test_recursive_zero_returns_one() -> None:

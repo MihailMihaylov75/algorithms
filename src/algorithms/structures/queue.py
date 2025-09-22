@@ -11,7 +11,7 @@ Notes:
 - For production, prefer collections.deque for amortized O(1) on both ends.
 """
 
-from typing import Generic, List, TypeVar
+from typing import Generic, TypeVar
 
 T = TypeVar("T")
 
@@ -29,7 +29,7 @@ class Queue(Generic[T]):
 
     def __init__(self) -> None:
         """Initializes an empty queue."""
-        self._items: List[T] = []
+        self._items: list[T] = []
 
     def enqueue(self, item: T) -> None:
         """

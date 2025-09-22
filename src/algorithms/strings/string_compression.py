@@ -22,7 +22,6 @@ Also provided (legacy behavior):
 from __future__ import annotations
 
 from collections import OrderedDict
-from typing import Dict, List
 
 
 def compress_runs(text: str) -> str:
@@ -37,7 +36,7 @@ def compress_runs(text: str) -> str:
     if not text:
         return ""
 
-    parts: List[str] = []
+    parts: list[str] = []
     current_char = text[0]
     count = 1
 
@@ -67,11 +66,11 @@ def string_compression(text: str) -> str:
     if not text:
         return ""
 
-    counts: Dict[str, int] = OrderedDict()  # insertion-ordered
+    counts: dict[str, int] = OrderedDict()  # insertion-ordered
     for ch in text:
         counts[ch] = counts.get(ch, 0) + 1
 
-    out_parts: List[str] = []
+    out_parts: list[str] = []
     for k, v in counts.items():
         out_parts.append(k)
         out_parts.append(str(v))

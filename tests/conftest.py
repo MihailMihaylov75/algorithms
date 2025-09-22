@@ -1,9 +1,10 @@
 __author__ = 'Mihail Mihaylov'
 import pytest
-from src.algorithms.structures.stack import Stack
-from src.algorithms.structures.queue import Queue
+
 from src.algorithms.structures.deque import Deque
+from src.algorithms.structures.queue import Queue
 from src.algorithms.structures.queue2stack import Queue2Stack
+from src.algorithms.structures.stack import Stack
 
 
 @pytest.fixture

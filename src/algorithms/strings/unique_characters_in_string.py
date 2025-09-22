@@ -14,7 +14,6 @@ Notes:
   2) is_unique_set: compares lengths of 'set(text)' and 'text' (O(n) time, O(n) space).
 """
 
-from typing import Set
 
 
 def is_unique(text: str) -> bool:
@@ -27,7 +26,7 @@ def is_unique(text: str) -> bool:
     Time Complexity: O(n)
     Space Complexity: O(min(n, alphabet))
     """
-    seen: Set[str] = set()
+    seen: set[str] = set()
     for ch in text:
         if ch in seen:
             return False

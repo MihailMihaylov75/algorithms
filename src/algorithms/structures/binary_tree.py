@@ -20,7 +20,7 @@ Notes:
 from __future__ import annotations
 
 from dataclasses import dataclass
-from typing import Generic, List, Optional, TypeVar
+from typing import Generic, TypeVar
 
 T = TypeVar("T")
 
@@ -36,8 +36,8 @@ class BTNode(Generic[T]):
         right: Right child (or None).
     """
     value: T
-    left: Optional["BTNode[T]"] = None
-    right: Optional["BTNode[T]"] = None
+    left: BTNode[T] | None = None
+    right: BTNode[T] | None = None
 
     def insert_left(self, value: T) -> None:
         """
@@ -64,7 +64,7 @@ class BTNode(Generic[T]):
             self.right = BTNode(value, right=self.right)
 
 
-def inorder(root: Optional[BTNode[T]]) -> List[T]:
+def inorder(root: BTNode[T] | None) -> list[T]:
     """
     Return the inorder traversal of the tree (left, root, right).
 
@@ -76,7 +76,7 @@ def inorder(root: Optional[BTNode[T]]) -> List[T]:
     """
     if root is None:
         return []
-    out: List[T] = []
+    out: list[T] = []
     out.extend(inorder(root.left))
     out.append(root.value)
     out.extend(inorder(root.right))

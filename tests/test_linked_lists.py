@@ -1,7 +1,8 @@
 __author__ = 'Mihail Mihaylov'
 # tests/test_linked_list.py
 import pytest
-from src.algorithms.structures.linked_lists import SinglyNode, cycle_check, reverse, nth_to_last
+
+from src.algorithms.structures.linked_lists import SinglyNode, cycle_check, nth_to_last, reverse
 
 
 def test_cycle_check_detects_cycle() -> None:

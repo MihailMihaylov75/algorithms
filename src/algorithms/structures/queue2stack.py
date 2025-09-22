@@ -17,7 +17,7 @@ Complexities:
 - Dequeue: Amortized O(1), worst-case O(n) when transferring.
 """
 
-from typing import Generic, List, TypeVar
+from typing import Generic, TypeVar
 
 T = TypeVar("T")
 
@@ -27,8 +27,8 @@ class Queue2Stack(Generic[T]):
 
     def __init__(self) -> None:
         """Initializes empty instack and outstack."""
-        self._instack: List[T] = []
-        self._outstack: List[T] = []
+        self._instack: list[T] = []
+        self._outstack: list[T] = []
 
     def enqueue(self, element: T) -> None:
         """

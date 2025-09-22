@@ -1,6 +1,6 @@
 __author__ = 'Mihail Mihaylov'
 
-from src.algorithms.oop_examples.class_inheritance import Printer, Book, BookShelf
+from src.algorithms.oop_examples.class_inheritance import Book, BookShelf, Printer
 
 
 def test_printer_print_reduces_remaining_pages() -> None:

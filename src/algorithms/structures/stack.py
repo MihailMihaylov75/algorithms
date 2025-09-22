@@ -11,7 +11,7 @@ Notes:
   - peek(): read the last element      → O(1)
 """
 
-from typing import Generic, List, TypeVar
+from typing import Generic, TypeVar
 
 T = TypeVar("T")
 
@@ -21,7 +21,7 @@ class Stack(Generic[T]):
 
     def __init__(self) -> None:
         """Initializes an empty stack."""
-        self._items: List[T] = []
+        self._items: list[T] = []
 
     def is_empty(self) -> bool:
         """

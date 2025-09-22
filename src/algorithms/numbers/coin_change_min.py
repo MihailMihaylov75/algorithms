@@ -17,8 +17,8 @@ Notes:
     * recursion depth up to target (naive), memo uses O(target)
 """
 
-from functools import lru_cache
-from typing import Iterable, Sequence
+from collections.abc import Iterable, Sequence
+from functools import cache
 
 
 def min_coins_naive(target: int, coins: Sequence[int]) -> int:
@@ -68,7 +68,7 @@ def min_coins_memo(target: int, coins: Iterable[int]) -> int:
             return 0
         raise ValueError("No valid coin denominations")
 
-    @lru_cache(maxsize=None)
+    @cache
     def solve(t: int) -> int:
         if t == 0:
             return 0
