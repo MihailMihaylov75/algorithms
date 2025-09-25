@@ -3,4 +3,4 @@ from src.algorithms.strings.reverse_string_recursive import reverse_string_recur
 
 
 def test_reverse_recursive_basic() -> None:
-    assert reverse_string_recursive("море") == "ером"
+    assert reverse_string_recursive("more") == "erom"

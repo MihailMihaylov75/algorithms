@@ -6,7 +6,6 @@ Examples:
     is_unique("abc")    -> True
     is_unique("abca")   -> False
     is_unique("")       -> True
-    is_unique("абв")    -> True   # Unicode supported
 
 Notes:
 - Two implementations:
